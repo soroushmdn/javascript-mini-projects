@@ -126,6 +126,7 @@ textarea {
 
   .logo span {
     font-size: 3rem;
+    padding-right: 0.4rem;
   }
 }
 
@@ -140,5 +141,6 @@ textarea {
 
   .logo span {
     font-size: 2rem;
+    padding-right: 0.2rem;
   }
 }
