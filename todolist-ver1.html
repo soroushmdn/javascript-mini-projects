@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- @@@@@@@@@@@@ boxicons.com @@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="./assets/css/boxicons.min.css" />
+
+    <!-- @@@@@@@@@@@@ CSS @@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="./assets/css/todolist-ver1.css" />
+
+    <title>Todo List Ver 1</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="todo__title">Todo List</h1>
+
+      <form class="todo__form">
+        <div class="todo__form-input">
+          <input
+            placeholder="Enter your task"
+            type="text"
+            class="todo__input"
+            id="todo-input"
+          />
+
+          <button class="todo__add-btn" id="todo-button">
+            <i class="bx bx-plus"></i>
+          </button>
+        </div>
+
+        <div class="todo__form-select">
+          <select name="todo-filter" class="todo__filter">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </form>
+
+      <div class="alert" id="alert"></div>
+
+      <ul class="todo__list" id="todo-list"></ul>
+    </div>
+
+    <!-- @@@@@@@@@@@@ MAIN JS @@@@@@@@@@@@ -->
+    <script src="./assets/js/todolist-ver1.js"></script>
+  </body>
+</html>
