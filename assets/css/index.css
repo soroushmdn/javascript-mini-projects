@@ -25,8 +25,12 @@
 
 body {
   background: hsl(0, 0%, 0%);
-  height: 100vh;
   padding: 4rem;
+
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
