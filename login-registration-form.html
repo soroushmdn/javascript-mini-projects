@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- @@@@@@@@@@@@ boxicons.com @@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="./assets/css/boxicons.min.css" />
+
+    <!-- @@@@@@@@@@@@ CSS @@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="./assets/css/login-registration-form.css" />
+
+    <title>Login & Registration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms">
+        <!-- @@@@@@@@@@@@ LOGIN FORM @@@@@@@@@@@@ -->
+        <div class="form login">
+          <h2 class="title">Login</h2>
+
+          <form action="">
+            <div class="field">
+              <div class="input-field">
+                <input
+                  placeholder="Enter your email"
+                  type="email"
+                  name=""
+                  id=""
+                />
+                <i class="bx bx-envelope icon"></i>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="input-field">
+                <input
+                  placeholder="Enter your Password"
+                  type="password"
+                  name=""
+                  id=""
+                />
+                <i class="bx bx-lock-alt icon"></i>
+                <i class="bx bx-hide eyeicon"></i>
+              </div>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="" id="remember" />
+              <label for="remember">Remember me</label>
+              <a href="#">Forgot password ?</a>
+            </div>
+
+            <input type="submit" value="Login" />
+          </form>
+
+          <p class="login-signup">
+            Not a member ? <span class="signup-button">Signup</span>
+          </p>
+        </div>
+
+        <!-- @@@@@@@@@@@@ SIGNUP FORM @@@@@@@@@@@@ -->
+        <div class="form signup">
+          <h2 class="title">Registration</h2>
+
+          <form action="https://github.com/soroushmdn">
+            <div class="field">
+              <div class="input-field">
+                <input
+                  class="name-input"
+                  placeholder="Enter your name"
+                  type="text"
+                  name=""
+                  id=""
+                />
+                <i class="bx bx-user icon"></i>
+              </div>
+            </div>
+
+            <div class="field email-field">
+              <div class="input-field">
+                <input
+                  class="email-input"
+                  placeholder="Enter your email"
+                  type="email"
+                  name=""
+                  id=""
+                />
+                <i class="bx bx-envelope icon"></i>
+              </div>
+
+              <span class="error">
+                <i class="bx bx-error-circle"></i>
+                <small>Please enter a valid email</small>
+              </span>
+            </div>
+
+            <div class="field password-field">
+              <div class="input-field">
+                <input
+                  class="password-input"
+                  placeholder="Create a password"
+                  type="password"
+                  name=""
+                  id=""
+                />
+                <i class="bx bx-lock-alt icon"></i>
+                <i class="bx bx-hide eyeicon"></i>
+              </div>
+
+              <span class="error">
+                <i class="bx bx-error-circle"></i>
+                <small
+                  >Please enter atleast 8 charatcer with number, symbol, small
+                  and capital letter.</small
+                >
+              </span>
+            </div>
+
+            <div class="field confirm-password-field">
+              <div class="input-field">
+                <input
+                  class="confirm-password-input"
+                  placeholder="Confirm your password"
+                  type="password"
+                  name=""
+                  id=""
+                />
+                <i class="bx bx-lock-alt icon"></i>
+                <i class="bx bx-hide eyeicon"></i>
+              </div>
+
+              <span class="error">
+                <i class="bx bx-error-circle"></i>
+                <small>Password don't match</small>
+              </span>
+            </div>
+
+            <div class="checkbox">
+              <input type="checkbox" name="" id="terms" />
+              <label for="terms">I accepted all terms and conditions</label>
+            </div>
+
+            <input type="submit" value="Signup" />
+          </form>
+
+          <p class="login-signup">
+            Already a member ? <span class="login-button">Login</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- @@@@@@@@@@@@ MAIN JS @@@@@@@@@@@@ -->
+    <script src="./assets/js/login-registration-form.js"></script>
+  </body>
+</html>
