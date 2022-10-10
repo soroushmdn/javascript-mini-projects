@@ -59,7 +59,6 @@ textarea {
   display: flex;
   align-items: center;
   width: 200%;
-  transition: height 0.2s;
 }
 
 .form {
@@ -131,13 +130,21 @@ input::placeholder {
   padding-right: 0.5rem;
 }
 
-.input-field input:is(:focus):is(:valid) {
+.input-field input:focus {
+  border-bottom: 2px solid hsl(167, 87%, 40%);
+}
+
+.input-field input:focus ~ i {
+  color: hsl(167, 87%, 40%);
+}
+
+/* .input-field input:is(:focus):is(:valid) {
   border-bottom: 2px solid hsl(167, 87%, 40%);
 }
 
 .input-field input:is(:focus):is(:valid) ~ i {
   color: hsl(167, 87%, 40%);
-}
+} */
 
 .error {
   gap: 0.3rem;
@@ -215,6 +222,10 @@ input[type='submit']:hover {
 
 .invalid input {
   border-bottom-color: red;
+}
+
+.invalid .icon {
+  color: red;
 }
 
 .invalid .error {
