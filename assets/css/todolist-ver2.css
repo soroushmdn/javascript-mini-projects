@@ -19,7 +19,6 @@
   padding: 0;
   list-style: none;
   font-family: '400';
-  font-size: 1.1rem;
 }
 
 body {
@@ -32,14 +31,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.1rem;
 }
 
 button,
 input,
-textarea {
+textarea,
+textarea::placeholder {
   border: none;
   outline: none;
   background: transparent;
+  font-size: 1.1rem;
 }
 
 /* @@@@@@@@@@@@@@@@ CSS CLASSES @@@@@@@@@@@@@@@@ */
@@ -55,16 +57,17 @@ textarea {
 
 .todo__textarea {
   position: relative;
-  height: 65px;
+  height: 100px;
 }
 
 .todo__textarea textarea {
   width: 100%;
   height: 100%;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 1rem 4rem 1rem 1rem;
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: var(--border-radius);
   resize: none;
+  caret-color: hsl(187, 70%, 55%);
 }
 
 .todo__textarea i {
@@ -74,6 +77,18 @@ textarea {
   transform: translateY(-50%);
   font-size: 1.3rem;
   pointer-events: none;
+}
+
+.todo__characters {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+
+  display: none;
 }
 
 .todo__textarea textarea::-webkit-scrollbar {
@@ -86,6 +101,19 @@ textarea {
 
 .todo__textarea textarea:focus ~ i {
   color: hsl(187, 70%, 55%);
+}
+
+.todo__textarea.active .todo__characters {
+  display: block;
+}
+
+.todo__textarea.error textarea {
+  border-color: red;
+}
+
+.todo__textarea.error i,
+.todo__textarea.error .todo__characters {
+  color: red;
 }
 
 .todo__ul {
@@ -124,8 +152,8 @@ textarea {
 }
 
 .todo__li input {
-  min-width: 20px;
-  height: 20px;
+  min-width: 17px;
+  height: 17px;
   accent-color: hsl(187, 70%, 55%);
 }
 
@@ -180,21 +208,31 @@ textarea {
 
 /* @@@@@@@@@@@@@@@@ BREAKPOINTS @@@@@@@@@@@@@@@@ */
 @media (max-width: 575px) {
-  * {
-    font-size: 0.9rem;
+  body {
+    font-size: 0.8rem;
   }
 
-  .todo__textarea {
-    height: 55px;
+  button,
+  input,
+  textarea,
+  textarea::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .todo__container {
+    padding: 1rem;
   }
 }
 
 @media (max-width: 374px) {
-  * {
-    font-size: 0.85rem;
+  body {
+    font-size: 0.7rem;
   }
 
-  .todo__textarea {
-    height: 50px;
+  button,
+  input,
+  textarea,
+  textarea::placeholder {
+    font-size: 0.7rem;
   }
 }
