@@ -1,8 +1,10 @@
 // 1. getting all required elements (variables)
+let textareaBox = document.querySelector('.todo__textarea');
 let textarea = document.querySelector('textarea');
 let todoList = document.querySelector('ul');
 let pendingTask = document.querySelector('.todo__pending span');
 let clearButton = document.querySelector('.todo__pending button');
+let writtenCharacters = document.querySelector('.written-characters');
 
 // 4. we will call this function while adding , deleting , checking , unchecking the li
 function alltasks() {
@@ -27,8 +29,14 @@ function alltasks() {
 textarea.addEventListener('keyup', (e) => {
   let textareaValue = textarea.value.trim(); // Trim() removes space befor and after input value
 
+  writtenCharacters.innerText = textareaValue.length; //converted written characters
+
   // if enter button on keyboard clicked and input value length is greater than 0 =>
-  if (e.key === 'Enter' && textareaValue.length > 0) {
+  if (
+    e.key === 'Enter' &&
+    textareaValue.length > 0 &&
+    textareaValue.length < 100
+  ) {
     let li = `<li class="todo__li" >
    <input type="checkbox" class="pending" onclick="checkboxClick(this)"/>
    <span>${textareaValue}</span>
@@ -40,8 +48,21 @@ textarea.addEventListener('keyup', (e) => {
 
     // remove value from textarea
     textarea.value = '';
+    writtenCharacters.innerText = '0';
 
     alltasks();
+  }
+
+  if (textareaValue.length > 0) {
+    textareaBox.classList.add('active');
+  } else {
+    textareaBox.classList.remove('active');
+  }
+
+  if (textareaValue.length > 100) {
+    textareaBox.classList.add('error');
+  } else {
+    textareaBox.classList.remove('error');
   }
 });
 
