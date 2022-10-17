@@ -1,0 +1,193 @@
+/* @@@@@@@@@@@@@@@@ BASE @@@@@@@@@@@@@@@@ */
+@font-face {
+  font-family: '400';
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: '500';
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: '600';
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: '400';
+}
+
+video {
+  outline: none;
+}
+
+/* @@@@@@@@@@@@@@@@ CSS CLASSES @@@@@@@@@@@@@@@@ */
+
+section {
+  background-color: #002566;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230041b3'/%3E%3Cstop offset='1' stop-color='%230041b3' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23005dff'/%3E%3Cstop offset='1' stop-color='%23005dff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234d8eff'/%3E%3Cstop offset='1' stop-color='%234d8eff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23002566'/%3E%3Cstop offset='1' stop-color='%23002566' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23005EFF'/%3E%3Cstop offset='1' stop-color='%23005EFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2399BEFF'/%3E%3Cstop offset='1' stop-color='%2399BEFF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  opacity: 0;
+  transition: 0.4s;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  background: hsl(207, 97%, 55%);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px 0 hsl(207, 97%, 10%);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.video {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.video::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.3);
+  transition: 0.4s;
+  pointer-events: none;
+}
+
+.video:hover::after {
+  background: hsla(0, 0%, 0%, 0);
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+}
+
+.video i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3rem;
+  pointer-events: none;
+}
+
+/* @@@@@@@@@@@@@ MAIN VIDEO @@@@@@@@@@@@@ */
+.main-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  z-index: 1;
+  transition: 0.4s;
+
+  scale: 1.1;
+  opacity: 0;
+  visibility: visible;
+  pointer-events: none;
+}
+
+.main-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-video i {
+  position: absolute;
+  top: -5rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: max-content;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.main-video:hover i {
+  top: 1rem;
+  opacity: 0.5;
+}
+
+.main-video i:hover {
+  opacity: 1;
+}
+
+/* @@@@@@@@@@@@@ JS CLASSES @@@@@@@@@@@@@ */
+section.active::after {
+  opacity: 1;
+}
+
+section.active .container {
+  visibility: hidden;
+}
+
+section.active .main-video {
+  scale: 1;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* @@@@@@@@@@@@ BREAKPOINTS @@@@@@@@@@@@  */
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-video {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 90%;
+    height: 40%;
+  }
+}
+
+@media (max-width: 575px) {
+  section {
+    padding: 2rem 1.5rem;
+  }
+}
