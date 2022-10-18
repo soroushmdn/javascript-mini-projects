@@ -1,0 +1,191 @@
+/* @@@@@@@@@@@@@@@@ BASE @@@@@@@@@@@@@@@@ */
+@font-face {
+  font-family: '400';
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: '500';
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: '600';
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: '400';
+}
+
+section {
+  background: linear-gradient(135deg, #00bcb4, #ff4747);
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  padding: 1.5rem;
+}
+
+.link {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 500px;
+  width: 100%;
+  height: 80px;
+}
+
+.link-layer {
+  background: linear-gradient(
+    45deg,
+    hsl(177, 100%, 70%),
+    hsl(0, 100%, 70%),
+    hsl(177, 100%, 70%),
+    hsl(0, 100%, 70%)
+  );
+  position: absolute;
+  top: 0;
+  width: 300%;
+  height: 100%;
+  transition: 0.3s left;
+
+  animation: link 10s linear infinite;
+}
+
+@keyframes link {
+  0% {
+    left: -200%;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: -200%;
+  }
+}
+
+.link a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: '600';
+}
+
+.container {
+  background: hsl(0, 0%, 95%);
+  max-width: 500px;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  padding: 2rem;
+
+  /* border: 10px solid; */
+  /* border-image: linear-gradient(#ffb87a, #ff85ad, #6b66ff) 1; */
+  /* border-image: repeating-linear-gradient(#ffb87a, #ff85ad, #6b66ff 150px) 1; */
+}
+
+.card {
+  background: hsl(0, 0%, 95%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3rem;
+  padding: 1rem 2rem 1rem 1rem;
+  box-shadow: 5px 5px 10px 0 hsl(0, 0%, 85%);
+}
+
+.card__data {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__data img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+}
+
+
+
+.card__social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__social a {
+  font-size: 1.3rem;
+  display: flex;
+  color: #000;
+  transition: 0.3s;
+}
+
+.card__social a:hover {
+  opacity: 0.5;
+}
+
+/* @@@@@@@@@@@@@ Js Classes @@@@@@@@@@@@@ */
+.sortable-chosen {
+  box-shadow: 5px 5px 10px 0 hsl(0, 0%, 75%);
+}
+
+.sortable-drag {
+  opacity: 0;
+}
+
+/* @@@@@@@@@@@@@ BREAKPOINTS @@@@@@@@@@@@@ */
+@media (max-width: 575px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    padding: 1rem 1.5rem 1rem 1rem;
+  }
+
+  .card__data {
+    gap: 0.5rem;
+  }
+
+  .card__data img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card__social {
+    gap: 0.5rem;
+  }
+
+  .card__social a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 374px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+}
