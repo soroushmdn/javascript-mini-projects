@@ -2,5 +2,4 @@
 ### Lots of javascript mini projects that designers can use in real websites.
 
 
-
-![_D__Web20project_Js20projects_index html](https://user-images.githubusercontent.com/95019708/199334233-c38b1c73-5710-415a-9815-6ff911db04c6.png)
+![_D__Web20project_Js20projects_index html](https://user-images.githubusercontent.com/95019708/199334901-b77ee972-c0e5-4436-8eb1-8c8f88325f9c.png)
