@@ -92,14 +92,9 @@ section {
   display: grid;
   gap: 1rem;
   padding: 2rem;
-
-  /* border: 10px solid; */
-  /* border-image: linear-gradient(#ffb87a, #ff85ad, #6b66ff) 1; */
-  /* border-image: repeating-linear-gradient(#ffb87a, #ff85ad, #6b66ff 150px) 1; */
 }
 
 .card {
-  background: hsl(0, 0%, 95%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,8 +115,6 @@ section {
   border-radius: 50%;
   display: flex;
 }
-
-
 
 .card__social {
   display: flex;
