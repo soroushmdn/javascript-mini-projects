@@ -1,0 +1,97 @@
+/* @@@@@@@@@@@@@@@@ BASE @@@@@@@@@@@@@@@@ */
+@font-face {
+  font-family: '400';
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: '500';
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: '600';
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: '700';
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: '500';
+}
+
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='100%' height='100%' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1005%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(21%2c 67%2c 96%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c384.487C71.103%2c369.422%2c142.31%2c355.719%2c201.501%2c313.541C258.891%2c272.646%2c303.022%2c215.746%2c328.83%2c150.172C353.786%2c86.762%2c344.527%2c18.628%2c344.391%2c-49.516C344.232%2c-129.551%2c366.993%2c-214.308%2c327.965%2c-284.183C286.278%2c-358.818%2c210.475%2c-413.394%2c128.195%2c-436.592C46.291%2c-459.684%2c-39.471%2c-436.404%2c-120.576%2c-410.645C-200.214%2c-385.352%2c-289.645%2c-360.304%2c-334.324%2c-289.694C-377.983%2c-220.697%2c-330.299%2c-129.686%2c-348.691%2c-50.134C-369.685%2c40.67%2c-465.265%2c113.192%2c-448.675%2c204.903C-431.894%2c297.669%2c-352.548%2c377.357%2c-265.026%2c412.388C-180.852%2c446.079%2c-88.697%2c403.28%2c0%2c384.487' fill='%2311364d'%3e%3c/path%3e%3cpath d='M1440 1075.4560000000001C1535.4279999999999 1081.511 1625.151 1021.6610000000001 1694.145 955.457 1756.545 895.581 1780.321 809.402 1803.961 726.215 1824.598 653.593 1834.126 579.596 1822.138 505.057 1810.297 431.43600000000004 1774.535 367.358 1735.98 303.532 1690.054 227.505 1654.883 137.87400000000002 1575.849 97.33999999999997 1491.8220000000001 54.245000000000005 1389.748 53.685 1298.868 79.34800000000001 1207.5 105.149 1130.905 166.589 1070.686 239.988 1011.549 312.06899999999996 960.665 397.899 961.027 491.134 961.373 580.147 1028.805 650.289 1072.58 727.795 1112.3220000000001 798.1610000000001 1147.071 868.924 1205.771 924.467 1274.6399999999999 989.633 1345.377 1069.452 1440 1075.4560000000001' fill='%23195073'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1005'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  /* background-attachment: fixed; */
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  background: hsl(203, 64%, 65%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 10px 0 hsl(203, 64%, 20%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+button i {
+  font-size: 2rem;
+}
+
+button span {
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background: hsl(203, 64%, 60%);
+}
+
+/* @@@@@@@@@@@@@@ JS CLASSES  @@@@@@@@@@@@@@ */
+
+button.timer {
+  font-size: 1.5rem;
+  background: none;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+button.timer b {
+  color: hsl(203, 64%, 65%);
+}
+
+@media (max-width: 575px) {
+  button {
+    column-gap: 0.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  button i {
+    font-size: 1.3rem;
+  }
+
+  button span {
+    font-size: 1rem;
+  }
+
+  /* @@@@@@@@@@@@@@ JS CLASSES  @@@@@@@@@@@@@@ */
+  button.timer {
+    font-size: 0.9rem;
+  }
+}
