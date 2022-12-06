@@ -1,0 +1,143 @@
+/* @@@@@@@@@@@@@@@@ BASE @@@@@@@@@@@@@@@@ */
+@font-face {
+  font-family: '400';
+  src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: '500';
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: '600';
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: '700';
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: '500';
+}
+
+body {
+  background: hsl(195, 38%, 85%);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* @@@@@@@@@@@@@@@@ CLASSES @@@@@@@@@@@@@@@@ */
+.floating-menu {
+  position: relative;
+}
+
+button,
+a div {
+  background: hsl(195, 38%, 85%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  position: relative;
+  z-index: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  width: 70px;
+  height: 70px;
+  box-shadow: -5px -5px 25px hsl(194, 36%, 85%),
+    inset 5px 5px 25px hsl(194, 36%, 85%), 5px 5px 25px hsl(194, 36%, 70%),
+    inset -5px -5px 25px hsl(194, 36%, 70%);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+button i {
+  font-size: 2rem;
+  color: hsl(194, 36%, 20%);
+  transition: transform 0.3s;
+}
+
+a {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+a div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: -3px -3px 25px hsl(194, 36%, 85%),
+    inset 3px 3px 25px hsl(194, 36%, 85%), 3px 3px 25px hsl(194, 36%, 70%),
+    inset -3px -3px 25px hsl(194, 36%, 70%);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+
+a div i {
+  font-size: 1.5rem;
+  color: hsl(194, 36%, 40%);
+}
+
+/* @@@@@@@@@@ TRANSITION DELAYS @@@@@@@@@@ */
+
+.floating-menu ul a:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.floating-menu ul a:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.floating-menu ul a:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+/* @@@@@@@@@@@@@ HOVER @@@@@@@@@@@@@@ */
+button:hover {
+  box-shadow: 5px 5px 25px hsl(194, 36%, 85%),
+    inset -5px -5px 25px hsl(194, 36%, 85%), -5px -5px 25px hsl(194, 36%, 70%),
+    inset 5px 5px 25px hsl(194, 36%, 70%);
+  transform: scale(0.95);
+}
+
+a:hover div {
+  box-shadow: 3px 3px 25px hsl(194, 36%, 85%),
+    inset -3px -3px 25px hsl(194, 36%, 85%), -3px -3px 25px hsl(194, 36%, 70%),
+    inset 3px 3px 25px hsl(194, 36%, 70%);
+  transform: scale(0.95);
+}
+
+/* @@@@@@@@@@@@@@ JS CLASSES @@@@@@@@@@@@@@ */
+
+.active button i {
+  transform: rotate(45deg);
+}
+
+.active ul a:nth-child(1) {
+  transform: translate(4rem, -4rem);
+}
+
+.active ul a:nth-child(2) {
+  transform: translateX(5rem);
+}
+
+.active ul a:nth-child(3) {
+  transform: translate(4rem, 4rem);
+}
