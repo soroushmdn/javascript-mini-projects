@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: '700';
+  font-family: '650';
   src: url(../fonts/Poppins-Bold.ttf);
 }
 
@@ -38,6 +38,8 @@ body {
 /* @@@@@@@@@@@@@@@@ CLASSES @@@@@@@@@@@@@@@@ */
 .floating-menu {
   position: relative;
+  width: 65px;
+  height: 65px;
 }
 
 button,
@@ -55,11 +57,11 @@ button {
   outline: none;
   cursor: pointer;
 
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   box-shadow: -5px -5px 25px hsl(194, 36%, 85%),
-    inset 5px 5px 25px hsl(194, 36%, 85%), 5px 5px 25px hsl(194, 36%, 70%),
-    inset -5px -5px 25px hsl(194, 36%, 70%);
+    inset 5px 5px 25px hsl(194, 36%, 85%), 5px 5px 25px hsl(194, 36%, 65%),
+    inset -5px -5px 25px hsl(194, 36%, 65%);
   transition: box-shadow 0.5s, transform 0.5s;
 }
 
@@ -83,16 +85,29 @@ a {
 a div {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   box-shadow: -3px -3px 25px hsl(194, 36%, 85%),
-    inset 3px 3px 25px hsl(194, 36%, 85%), 3px 3px 25px hsl(194, 36%, 70%),
-    inset -3px -3px 25px hsl(194, 36%, 70%);
+    inset 3px 3px 25px hsl(194, 36%, 85%), 3px 3px 25px hsl(194, 36%, 65%),
+    inset -3px -3px 25px hsl(194, 36%, 65%);
   transition: box-shadow 0.5s, transform 0.5s;
 }
 
 a div i {
   font-size: 1.5rem;
   color: hsl(194, 36%, 40%);
+}
+
+/* @@@@@@@@@@ ROTATE ICONS FOR MENU VER 2 @@@@@@@@@@ */
+
+.floating-menu.ver2 ul a:nth-child(1) div i {
+  transform: rotate(135deg);
+}
+
+.floating-menu.ver2 ul a:nth-child(2) div i {
+  transform: rotate(90deg);
+}
+
+.floating-menu.ver2 ul a:nth-child(3) div i {
+  transform: rotate(45deg);
 }
 
 /* @@@@@@@@@@ TRANSITION DELAYS @@@@@@@@@@ */
@@ -110,34 +125,51 @@ a div i {
 }
 
 /* @@@@@@@@@@@@@ HOVER @@@@@@@@@@@@@@ */
+
 button:hover {
   box-shadow: 5px 5px 25px hsl(194, 36%, 85%),
-    inset -5px -5px 25px hsl(194, 36%, 85%), -5px -5px 25px hsl(194, 36%, 70%),
-    inset 5px 5px 25px hsl(194, 36%, 70%);
+    inset -5px -5px 25px hsl(194, 36%, 85%), -5px -5px 25px hsl(194, 36%, 65%),
+    inset 5px 5px 25px hsl(194, 36%, 65%);
   transform: scale(0.95);
 }
 
 a:hover div {
   box-shadow: 3px 3px 25px hsl(194, 36%, 85%),
-    inset -3px -3px 25px hsl(194, 36%, 85%), -3px -3px 25px hsl(194, 36%, 70%),
-    inset 3px 3px 25px hsl(194, 36%, 70%);
+    inset -3px -3px 25px hsl(194, 36%, 85%), -3px -3px 25px hsl(194, 36%, 65%),
+    inset 3px 3px 25px hsl(194, 36%, 65%);
   transform: scale(0.95);
 }
 
 /* @@@@@@@@@@@@@@ JS CLASSES @@@@@@@@@@@@@@ */
 
-.active button i {
+.floating-menu.active button i {
   transform: rotate(45deg);
 }
 
-.active ul a:nth-child(1) {
+/* @@@@@@@@@@@@@@ JS CLASSES  @@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@    VER 1    @@@@@@@@@@@@@@ */
+.floating-menu.ver1.active ul a:nth-child(1) {
   transform: translate(4rem, -4rem);
 }
 
-.active ul a:nth-child(2) {
+.floating-menu.ver1.active ul a:nth-child(2) {
   transform: translateX(5rem);
 }
 
-.active ul a:nth-child(3) {
+.floating-menu.ver1.active ul a:nth-child(3) {
   transform: translate(4rem, 4rem);
+}
+
+/* @@@@@@@@@@@@@@ JS CLASSES  @@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@    VER 2    @@@@@@@@@@@@@@ */
+.floating-menu.ver2.active ul a:nth-child(1) {
+  transform: rotate(-135deg) translateY(6rem);
+}
+
+.floating-menu.ver2.active ul a:nth-child(2) {
+  transform: rotate(-90deg) translateY(6rem);
+}
+
+.floating-menu.ver2.active ul a:nth-child(3) {
+  transform: rotate(-45deg) translateY(6rem);
 }
