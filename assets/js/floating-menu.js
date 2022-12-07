@@ -1,5 +1,7 @@
-const floatButton = document.querySelector('button');
+const floatButtons = document.querySelectorAll('button');
 
-floatButton.addEventListener('click', () => {
-  floatButton.parentElement.classList.toggle('active');
+floatButtons.forEach((button) => {
+  button.addEventListener('click', function () {
+    this.parentElement.classList.toggle('active');
+  });
 });
